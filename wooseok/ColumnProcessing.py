@@ -8,7 +8,7 @@ from scipy.spatial import distance
 # Load friendly facilities
 df = pd.read_csv("datas/base_data_final.csv", encoding="utf-8")
 # Load house data
-df2 = pd.read_csv("datas/seoul_pri_2017_ll.csv", encoding="utf-8")
+df2 = pd.read_csv("datas/seoul_pri_2019_ll.csv", encoding="utf-8")
 
 # data rectify: delete null data
 filt = df['longitude'].isnull()
@@ -118,7 +118,7 @@ selection_range = [[0.5, 1, 1.5],
                    ,[0.1, 0.3, 0.5]
                   ]
 
-csv_file_name = "processed_data_2017.csv"
+csv_file_name = "processed_data_2019.csv"
 
 #======================================================================
 for j in tqdm(range(len(df2['longitude'])), desc="Progress", mininterval=0.1):
